@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --border-color:#D3D3D3;
+}
+button{
+  border: none;
+  border :1px solid  black;
+  border-radius: .5rem;
+  padding: .2rem .5rem;
+  cursor: pointer;
+}
+.App {
+  padding: 1rem;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "header header header header header header"
+                       "properties main main main main main"                
+}
+.header{
+  grid-area: header;
+  height: 10vh;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.properties{
+  margin-top: 1rem;
+  grid-area: properties; 
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.properties > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+}
+.properties > div > p{
+  font-weight: bold;
+}
+.main{
+  padding: 1rem;
+  min-height:80vh;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  grid-area: main;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.main > div:nth-child(1){
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main_section_grid{
+  padding: 1rem;
+  width: 100%;
+  height: 50%;
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.main_section_grid > div{
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table > thead > tr > th{
+  
+  padding: .2rem;
+}
+
+
+.properties_table_font_size{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+.btn_font_size{
+  display: flex;
+  gap: .5rem;
+}
+
+/* carousel */
+.carousel{
+  padding: 1rem;
+  height: 50%;
+  width: 30%;
+  border-radius: 1rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.carousel > div:nth-child(2){
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
