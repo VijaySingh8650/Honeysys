@@ -19,7 +19,13 @@ const Properties = () => {
 
         {/* color */}
         <button
-          onClick={() => dispatch({ type: Color_Change, payload: !color })}
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth',
+            });
+            dispatch({ type: Color_Change, payload: !color })
+          }}
         >
           Color: {!color ? 'red' : 'default'}
         </button>
@@ -29,12 +35,24 @@ const Properties = () => {
           Font-Size: {fontSize}
           <div className="btn_font_size">
             <button
-              onClick={() => dispatch({ type: Font_Change, payload: '1rem' })}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+                dispatch({ type: Font_Change, payload: '1rem' })
+              }}
             >
               1rem
             </button>
             <button
-              onClick={() => dispatch({ type: Font_Change, payload: '2rem' })}
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: 'smooth',
+                });
+                dispatch({ type: Font_Change, payload: '2rem' })
+              }}
             >
               2rem
             </button>
@@ -51,12 +69,17 @@ const Properties = () => {
           Columns: {carousel ? 'Carousel' : columns}
           <div className="btn_font_size">
             <button
-              onClick={() => dispatch({ type: Columns_Change, payload: 5 })}
-            >
+              onClick={() => {
+                window.scrollTo(0, document.body.scrollHeight);
+                dispatch({ type: Columns_Change, payload: 5 })
+              }} >
               5
             </button>
             <button
-              onClick={() => dispatch({ type: Columns_Change, payload: 7 })}
+              onClick={() => {
+                window.scrollTo(0, document.body.scrollHeight);
+                dispatch({ type: Columns_Change, payload: 7 })
+              }}
             >
               7
             </button>
@@ -68,7 +91,10 @@ const Properties = () => {
           Carousel{' '}
           <button
             onClick={() =>
+            {
+              window.scrollTo(0, document.body.scrollHeight);
               dispatch({ type: Carousel_change, payload: !carousel })
+            }
             }
           >
             {!carousel ? 'false' : 'true'}
